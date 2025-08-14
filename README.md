@@ -1,12 +1,43 @@
-Welcome to your new TanStack app! 
+# IdeaDrop
 
-# Getting Started
+IdeaDrop is a platform for sharing, exploring, and building on startup ideas and side hustles.
+The homepage displays the latest ideas fetched from the API, and users can view more details by visiting the full ideas list.
+
+Live: <https://idea-drop-ui-flame.vercel.app/>
+
+<img src="./ideadrop.png" />
+
+## Features
+
+- Latest Ideas Preview — Fetches and displays the 3 most recent ideas using `@tanstack/react-query`.
+
+- Clean UI — Responsive layout with Tailwind CSS for styling.
+
+- Routing — Client-side navigation with `@tanstack/react-router`.
+
+- API Integration — Fetches ideas from a backend API (fetchIdeas).
+
+- Reusable Components — IdeaCard component for displaying idea details.
+
+## Tech Stack
+
+- React — Frontend framework
+
+- `@tanstack/react-router` — File-based routing
+
+- `@tanstack/react-query` — Data fetching and caching
+
+- Tailwind CSS — Styling
+
+- Lucide Icons — SVG icon set
+
+## Getting Started
 
 To run this application:
 
 ```bash
 npm install
-npm run start  
+npm run start
 ```
 
 # Building For Production
@@ -29,10 +60,8 @@ npm run test
 
 This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
 
-
-
-
 ## Routing
+
 This project uses [TanStack Router](https://tanstack.com/router). The initial setup is a file based router. Which means that the routes are managed as files in `src/routes`.
 
 ### Adding A Route
@@ -68,8 +97,8 @@ In the File Based Routing setup the layout is located in `src/routes/__root.tsx`
 Here is an example layout that includes a header:
 
 ```tsx
-import { Outlet, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import { Link } from "@tanstack/react-router";
 
@@ -86,13 +115,12 @@ export const Route = createRootRoute({
       <TanStackRouterDevtools />
     </>
   ),
-})
+});
 ```
 
 The `<TanStackRouterDevtools />` component is not required so you can remove it if you don't want it in your layout.
 
 More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
 
 ## Data Fetching
 
